@@ -153,45 +153,36 @@ void motorStep(String siz)
     delay(3);
   }
 }
-//
-//
-//
-//
-//
-//ItKindaWorks - Creative Commons 2016
-//github.com/ItKindaWorks
-//
-//Simple sctepper motor control demo
 
-//const int stepPin = 4;   //pin to pulse for steps
-//const int dirPin = 3;    //pin to change step direction
-//
-//void setup(){
-//
-//  //set pins as outputs
-//  pinMode(stepPin, OUTPUT);
-//  pinMode(dirPin, OUTPUT);
-//}
-//
-//
-//
-//void loop(){
-//
+const int stepPin = 4;   //pin to pulse for steps
+const int dirPin = 3;    //pin to change step direction
+
+void setup(){
+
+  //set pins as outputs
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+}
+
+
+
+void loop(){
+
 //  //step forward 100 steps
-//  stepperFWD();
-//  for(int i = 0; i < 100; i++){
-//    motorStep();
-//    delay(1);
-//  }
-//
-//  //step backwards 100 steps
-//  stepperREV();
-//  for(int i = 0; i < 100; i++){
-//    motorStep();
-//    delay(1);
-//  }
-//
-//}
+ stepperFWD();
+  for(int i = 0; i < 100; i++){
+    motorStep();
+    delay(1);
+  }
+
+  //step backwards 100 steps
+  stepperREV();
+  for(int i = 0; i < 100; i++){
+    motorStep();
+    delay(1);
+  }
+
+}
 
 
 
